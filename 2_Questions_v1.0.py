@@ -17,6 +17,9 @@ def check_ans(question, ans, attempts, score):
         return False
 
 
+# Imports the dictionary file
+# containing the questions and their answers
+# into this file
 def print_dictionary():
     for question_id, ques_answer in quiz.items():
         for key in ques_answer:

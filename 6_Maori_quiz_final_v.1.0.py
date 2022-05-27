@@ -9,11 +9,11 @@ def check_ans(question, ans, attempts, score):
     # to make sure the quiz is not Case sensitive.
 
     if quiz[question]['answer'].lower() == ans.lower():
-        print(f"That's Correct! Your score is now \n{score + 1}/10")
+        print(f"\nThat's Correct! Your score is now \n{score + 1}/10\n")
         return True
     else:
         print(f"Sorry, that's incorrect."
-              f" \nYou have {attempts - 1} left! \nTry again...")
+              f" \nYou have {attempts - 1} left! \nTry again...\n")
         return False
 
 
@@ -22,7 +22,8 @@ def print_dictionary():
         for key in ques_answer:
             print(key + ':', ques_answer[key])
 
-            # yes/no checking function
+
+# yes/no checking function
 def yes_no(question_text):
     while True:
 
@@ -57,7 +58,8 @@ def instructions():
           "you will gain a point")
     print()
     print("Answers will be shown at the end")
-    print("Good luck!")
+    print()
+    input("Press any key to continue. Good luck!: ")
 
 
 # Main Routine
@@ -65,32 +67,38 @@ played_before = yes_no("Have you played this game before? ")
 if played_before == "No":
     instructions()
 else:
+    print("Error; please try again")
 
-    # enables user to 'skip' the question
-    # if they aren't confident enough to answer it
 
-    # gives the user 3 attempts
-    # to get the question right
-    while True:
-        score = 0
-        for question in quiz:
-            attempts = 3
-            while attempts > 0:
-                print(quiz[question]['question'])
-                answer = input("Enter Answer "
-                               "(To move to the next question, type 'skip') : ")
-                if answer == "skip":
-                    break
-                check = check_ans(question, answer, attempts, score)
-                if check:
-                    score += 1
-                    break
-                attempts -= 1
+# enables user to 'skip' the question
+# if they aren't confident enough to answer it
 
-        break
+# gives the user 3 attempts
+# to get the question right
+while True:
+    score = 0
+    for question in quiz:
+        attempts = 3
+        while attempts > 0:
+            print(quiz[question]['question'])
+            answer = input("Enter Answer "
+                           "(To move to the next question, type 'skip') : ")
+            if answer == "skip":
+                break
+            check = check_ans(question, answer, attempts, score)
+            if check:
+                score += 1
+                break
+            attempts -= 1
 
-    # Tells the user what their final score is
-    print(f"Your final score is {score}/10!\n\n")
+    break
+
+# Tells the user what their final score is
+print(f"Your final score is {score}/10!\n\n")
+answers = input("Would you like to see the answers?: ")
+if answers == "yes" or answers == "y":
     print("Here are the answers: \n")
     print_dictionary()
+
+else:
     print("Thanks for playing!")
