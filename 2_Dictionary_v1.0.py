@@ -3,7 +3,7 @@
 
 quiz = {
     1: {
-        "question": "\nQ1: The Maori word for 'five'\n",
+        "question": "\nQ1: The Maori word for 'five'",
         "answer": "Rima"
     },
     2: {

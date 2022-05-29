@@ -44,12 +44,12 @@ def yes_no(question_text):
 
         # Otherwise, show error
         else:
-            print("Please use either 'yes' or 'no'")
+            print(formatter("-", "Please use either 'yes' or 'no'"))
 
 
 # Function to display instructions
 def instructions():
-    print("- How to Play -")
+    print(formatter("-", "- How to Play -"))
     print()
     print()
     print("You will be asked _ questions")
@@ -64,6 +64,14 @@ def instructions():
     input("Press 'Enter' to continue. Good luck!: ")
 
 
+# Function to format text output
+def formatter(symbol, text):
+    sides = symbol * 3
+    formatted_text = f"{sides} {text} {sides}"
+    top_bottom = symbol * len(formatted_text)
+    return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
+
+
 # Main Routine
 # Asks the user if they have played before
 # If no, prints instructions then continues program
@@ -72,7 +80,7 @@ played_before = yes_no("Have you completed this quiz before? ")
 if played_before == "No":
     instructions()
 else:
-    input("Press 'Enter' to continue. Good luck!: ")
+    input("\nPress 'Enter' to continue. Good luck!: ")
 
 
 # Enables user to 'skip' the question
@@ -101,11 +109,11 @@ while True:
 # Asks the user whether they want the answers
 # If yes, prints the answers from the dictionary
 # If no, ends the program
-print(f"Your final score is {score}/10!\n")
+print(formatter("!", "fYour final score is {score}/10!\n"))
 answers = input("Would you like to see the answers?: ")
 if answers == "yes" or answers == "y":
-    print("Here are the answers: \n")
+    print(formatter("*", "Here are the answers: \n"))
     print_dictionary()
 
 else:
-    print("Thanks for playing!")
+    print(formatter("-", "Thanks for playing!"))
