@@ -33,12 +33,16 @@ def instructions():
           "you will gain a point")
     print()
     print("Answers will be shown at the end")
+    print()
     input("Press any key to continue. Good luck!: ")
 
 
 # Main Routine
-played_before = yes_no("Have you played this game before? ")
+# Asks the user if they have played before
+# If no, prints instructions then continues program
+# If yes, program continues
+played_before = yes_no("Have you completed this quiz before? ")
 if played_before == "No":
     instructions()
 else:
-    print("Program continues")
+    print()

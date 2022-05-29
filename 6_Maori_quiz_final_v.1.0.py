@@ -1,6 +1,8 @@
 from Dictionary import quiz
 
 
+# Function to check whether the answer provided
+# by the user matches the one in the dictionary
 def check_ans(question, ans, attempts, score):
 
     # Takes the arguments
@@ -59,21 +61,24 @@ def instructions():
     print()
     print("Answers will be shown at the end")
     print()
-    input("Press any key to continue. Good luck!: ")
+    input("Press 'Enter' to continue. Good luck!: ")
 
 
 # Main Routine
-played_before = yes_no("Have you played this game before? ")
+# Asks the user if they have played before
+# If no, prints instructions then continues program
+# If yes, program continues
+played_before = yes_no("Have you completed this quiz before? ")
 if played_before == "No":
     instructions()
 else:
-    print("Error; please try again")
+    input("Press 'Enter' to continue. Good luck!: ")
 
 
-# enables user to 'skip' the question
+# Enables user to 'skip' the question
 # if they aren't confident enough to answer it
 
-# gives the user 3 attempts
+# Gives the user 3 attempts
 # to get the question right
 while True:
     score = 0
@@ -93,8 +98,10 @@ while True:
 
     break
 
-# Tells the user what their final score is
-print(f"Your final score is {score}/10!\n\n")
+# Asks the user whether they want the answers
+# If yes, prints the answers from the dictionary
+# If no, ends the program
+print(f"Your final score is {score}/10!\n")
 answers = input("Would you like to see the answers?: ")
 if answers == "yes" or answers == "y":
     print("Here are the answers: \n")

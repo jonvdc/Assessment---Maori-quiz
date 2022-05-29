@@ -3,42 +3,42 @@
 
 quiz = {
     1: {
-        "question": "The Maori word for 'five'",
+        "question": "\nQ1: The Maori word for 'five'\n",
         "answer": "Rima"
     },
     2: {
-        "question": "Christchurch's Maori name?",
+        "question": "\nQ2: Christchurch's Maori name?",
         "answer": "Otautahi"
     },
     3: {
-        "question": "Maori word for 'chicken'",
+        "question": "\nQ3: Maori word for 'chicken'",
         "answer": "Heihei"
     },
     4: {
-        "question": "Count to ten in Maori",
+        "question": "\nQ4: Count to ten in Maori",
         "answer": "tahi rua toru wha rima ono whitu waru iwa tekau"
     },
     5: {
-        "question": "Translate 'rātapu' into english",
-        "answer": "Sunday"
+        "question": "Q5: Translate 'rātapu' into english",
+        "answer": "\nSunday"
     },
     6: {
-        "question": "Translate 'rua tekau' into English (Use letters)",
+        "question": "\nQ6: Translate 'rua tekau' into English (Use letters)",
         "answer": "Twenty"
     },
     7: {
-        "question": "Translate whanau into English",
+        "question": "\nQ7: Translate whanau into English",
         "answer": "Family"
     },
     8: {
-        "question": "Translate 'New Zealand' into English",
+        "question": "\nQ8: Translate 'New Zealand' into English",
         "answer": "Aotearoa"
     },
     9: {
-        "question": "Maori for 'Ocean'",
+        "question": "\nQ9: Maori for 'Ocean'",
         "answer": "Moana"
     },
     10: {
-        "question": "Maori for 'Ocean'",
-        "answer": "Moana"
+        "question": "\nQ10: 'One hundred' in Maori?",
+        "answer": "Kotahi rau"
     }}
