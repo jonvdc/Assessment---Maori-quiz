@@ -45,4 +45,5 @@ played_before = yes_no("Have you completed this quiz before? ")
 if played_before == "No":
     instructions()
 else:
-    print()
+    input("Press 'Enter' to continue: ")
+    print("Program continues")

@@ -1,4 +1,6 @@
-from test import quiz
+# Includes code from 'Questions' file
+# To make testing easier
+from Dictionary import quiz
 
 
 # Function to check whether the answer provided

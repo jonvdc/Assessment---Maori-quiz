@@ -1,15 +1,17 @@
+# Includes code from 'Questions' file
+# To make testing easier
 from Dictionary import quiz
 
 
-def check_ans(question, ans, attempts, score):
+# Function to check whether the answer provided
+# by the user matches the one in the dictionary
+def check_ans(question, ans, attempts):
 
-    # Takes the arguments
-    # and confirms if the answer provided by user is correct.
     # Converts all answers to lower case
     # to make sure the quiz is not Case sensitive.
 
     if quiz[question]['answer'].lower() == ans.lower():
-        print(f"\nThat's Correct! Your score is now \n{score + 1}/10\n")
+        print(f"\nThat's Correct!")
         return True
     else:
         print(f"Sorry, that's incorrect."
@@ -17,7 +19,20 @@ def check_ans(question, ans, attempts, score):
         return False
 
 
-def print_dictionary():
-    for question_id, ques_answer in quiz.items():
-        for key in ques_answer:
-            print(key + ':', ques_answer[key])
+# Main routine
+# Gives the user 3 attempts to get the question right
+while True:
+    for question in quiz:
+        attempts = 3
+        while attempts > 0:
+            print(quiz[question]['question'])
+            answer = input("Enter Answer "
+                           "(To move to the next question, type 'skip') : ")
+            if answer == "skip":
+                break
+            check = check_ans(question, answer, attempts)
+            if check:
+                break
+            attempts -= 1
+
+    break

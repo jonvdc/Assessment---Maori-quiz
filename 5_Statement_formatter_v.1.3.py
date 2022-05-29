@@ -7,8 +7,8 @@ def formatter(symbol, text):
 
 
 # Main routine
-print(formatter("-", "Welcome to the Lucky Unicorn game"))
+print(formatter("-", "Welcome to the Quiz!"))
 print()
-print(formatter("!", "Congratulations, you got a unicorn"))
+print(formatter("!", "Here are the rules: "))
 print()
 print(formatter("*", "Goodbye"))
