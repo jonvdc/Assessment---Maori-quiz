@@ -19,8 +19,8 @@ quiz = {
         "answer": "tahi rua toru wha rima ono whitu waru iwa tekau"
     },
     5: {
-        "question": "Q5: Translate 'rātapu' into english",
-        "answer": "\nSunday"
+        "question": "\nQ5: Translate 'rātapu' into english",
+        "answer": "Sunday"
     },
     6: {
         "question": "\nQ6: Translate 'rua tekau' into English (Use letters)",

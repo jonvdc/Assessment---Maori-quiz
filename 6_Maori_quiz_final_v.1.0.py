@@ -44,7 +44,7 @@ def yes_no(question_text):
 
         # Otherwise, show error
         else:
-            print(formatter("-", "Please use either 'yes' or 'no'"))
+            print("Please use either 'yes' or 'no'")
 
 
 # Function to display instructions
@@ -109,11 +109,11 @@ while True:
 # Asks the user whether they want the answers
 # If yes, prints the answers from the dictionary
 # If no, ends the program
-print(formatter("!", "fYour final score is {score}/10!\n"))
+print(formatter("!", f"Your final score is {score}/10!"))
 answers = input("Would you like to see the answers?: ")
 if answers == "yes" or answers == "y":
-    print(formatter("*", "Here are the answers: \n"))
+    print("Here are the answers: \n")
     print_dictionary()
 
 else:
-    print(formatter("-", "Thanks for playing!"))
+    print(formatter("*", "Thanks for playing!"))
